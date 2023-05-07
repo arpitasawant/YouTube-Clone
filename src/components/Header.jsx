@@ -101,7 +101,7 @@ const Header = () => {
                     <img src="https://www.flavoursguru.com/catalog/view/theme/default/image/Home/female-vector.png" />
                 </div>
                 <button className="text-black font-bold bg-white w-[40px] md:w-[60px] h-8 md:h-10 flex items-center justify-center border border-l-0 border-[#f5e7e7] rounded-r-3xl bg-white/[0.1]">
-                    <a href="/login">Login</a>
+                    <a class="text-black " href="/login">Login</a>
                 </button>
             </div>
         </div>
