@@ -14,6 +14,7 @@ import { Context } from "../context/contextApi";
 import Loader from "../shared/loader";
 import Login from "./Login";
 
+//Header Section
 const Header = () => {
     const [searchQuery, setSearchQuery] = useState("");
 
