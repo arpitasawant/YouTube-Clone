@@ -11,6 +11,11 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.cine{
+    text-decoration: none;
+    color: #da4733;
+    margin-top: 20px;
+}
 #root {
     height: 100vh;
 }
