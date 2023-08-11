@@ -59,12 +59,13 @@ const Header = () => {
                     <img
                         className="h-full  dark:md:block"
                         src={ytLogo}
-                        alt="Image"
-                    /><p className="cine">CineSphere</p> 
+                        alt="cine1"
+                    />
+                    <p className="cine">CineSphere</p> 
                     <img
                         className="h-full md:hidden"
                         src={ytLogoMobile}
-                        alt="Image"
+                        alt="cine1"
                     />
                 </Link>
             </div>
