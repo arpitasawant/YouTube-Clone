@@ -7,8 +7,8 @@ import SearchResult from "./components/SearchResult";
 import VideoDetails from "./components/VideoDetails";
 import { AppContext } from "./context/contextApi";
 import Login from "./components/Login";
-import Signup from "./components/Signup";
-import login from "./shared/login";
+// import Signup from "./components/Signup";
+// import login from "./shared/login";
 import '../src/shared/login';
 const App = () => {
     return (
