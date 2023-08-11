@@ -6,7 +6,7 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import 'jquery/dist/jquery.min.js';
 import $ from 'jquery';
 import {  Link } from "react-router-dom";
-class Home extends React.Component {
+class Login extends React.Component {
   componentDidMount(){
    //animation code
     $(document).ready(function(){
@@ -84,5 +84,5 @@ class Home extends React.Component {
 )
 };
 }
-export default Home;
+export default Login;
 
