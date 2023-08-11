@@ -11,11 +11,6 @@ const SearchResult = () => {
     const { searchQuery } = useParams();
     const { setLoading } = useContext(Context);
 
-    useEffect(() => {
-        document.getElementById("root").classList.remove("custom-h");
-        fetchSearchResults();
-    }, [searchQuery]);
-
     const fetchSearchResults = () => {
         setLoading(true);
         fetchDataFromApi(`search/?q=${searchQuery}`).then((res) => {
@@ -23,6 +18,13 @@ const SearchResult = () => {
             setResult(res?.contents);
             setLoading(false);
         });
+        
+        useEffect(() => {
+        document.getElementById("root").classList.remove("custom-h");
+        fetchSearchResults();
+    }, [searchQuery]);
+
+    
     };
 
     return (

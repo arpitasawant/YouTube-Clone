@@ -15,13 +15,7 @@ const VideoDetails = () => {
     const { id } = useParams();
     const { setLoading } = useContext(Context);
 
-    useEffect(() => {
-        document.getElementById("root").classList.add("custom-h");
-        fetchVideoDetails();
-        fetchRelatedVideos();
-    }, [id]);
-
-    const fetchVideoDetails = () => {
+        const fetchVideoDetails = () => {
         setLoading(true);
         fetchDataFromApi(`video/details/?id=${id}`).then((res) => {
             console.log(res);
@@ -38,6 +32,14 @@ const VideoDetails = () => {
             setLoading(false);
         });
     };
+    
+    useEffect(() => {
+        document.getElementById("root").classList.add("custom-h");
+        fetchVideoDetails();
+        fetchRelatedVideos();
+    }, [id]);
+
+
 
     return (
         <div className="flex justify-center flex-row h-[calc(100%-56px)] bg-black">
@@ -62,6 +64,7 @@ const VideoDetails = () => {
                                 <div className="flex h-11 w-11 rounded-full overflow-hidden">
                                     <img
                                         className="h-full w-full object-cover"
+                                        alt="sug"
                                         src={video?.author?.avatar[0]?.url}
                                     />
                                 </div>
