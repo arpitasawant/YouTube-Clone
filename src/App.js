@@ -7,7 +7,7 @@ import SearchResult from "./components/SearchResult";
 import VideoDetails from "./components/VideoDetails";
 import { AppContext } from "./context/contextApi";
 import Login from "./components/Login";
-import Signup from "./components/Signup";
+// import Signup from "./components/Signup";
 // import login from "./shared/login";
 import '../src/shared/login';
 const App = () => {
@@ -24,7 +24,7 @@ const App = () => {
                         />
                         <Route path="/video/:id" element={<VideoDetails />} />
                     
-                    <Route path="/login" element={<Signup />} />
+                    <Route path="/login" element={<Login />} />
                     <Route path="/" element={<Feed />} />
                     {/* <Route path="/a" element={<Signup />} /> */}
                     </Routes>

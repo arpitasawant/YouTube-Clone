@@ -5,9 +5,9 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import "jquery/dist/jquery.min.js";
 import $ from "jquery";
 import { Link } from "react-router-dom";
-class Home extends React.Component {
+
+class Login extends React.Component {
   componentDidMount() {
-    //animation code
     $(document).ready(function () {
       $(".login-info-box").fadeOut();
       $(".login-show").addClass("show-log-panel");
@@ -36,13 +36,11 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div class="login-reg-panel">
-        <div class="login-info-box">
+      <div className="login-reg-panel">
+        <div className="login-info-box">
           <h2>Have an account?</h2>
-          <p>If you already has an account, just login. We've missed you!</p>
-          <label id="label-register" for="log-reg-show">
-            Login
-          </label>
+          <p>If you already have an account, just login. We've missed you!</p>
+          <label htmlFor="log-reg-show">Login</label>
           <input
             type="radio"
             name="active-log-panel"
@@ -51,12 +49,10 @@ class Home extends React.Component {
           />
         </div>
 
-        <div class="register-info-box">
+        <div className="register-info-box">
           <h2>Don't have an account?</h2>
-          <p>Sign up and discover great.See more,Enjoy more</p>
-          <label id="label-login" for="log-login-show">
-            Register
-          </label>
+          <p>Sign up and discover great. See more, enjoy more.</p>
+          <label htmlFor="log-login-show">Register</label>
           <input
             type="radio"
             name="active-log-panel"
@@ -65,16 +61,16 @@ class Home extends React.Component {
           />
         </div>
 
-        <div class="white-panel">
-          <div class="login-show">
+        <div className="white-panel">
+          <div className="login-show">
             <h2>LOGIN</h2>
             <input type="text" placeholder="Email" />
             <input type="password" placeholder="Password" />
             <Link to="/">
-              <input type="button" value="Login" href="/" />
+              <input type="button" value="Login" />
             </Link>
           </div>
-          <div class="register-show">
+          <div className="register-show">
             <h2>REGISTER</h2>
             <input type="text" placeholder="Email" />
             <input type="password" placeholder="Password" />
@@ -88,4 +84,5 @@ class Home extends React.Component {
     );
   }
 }
-export default Home;
+
+export default Login;
