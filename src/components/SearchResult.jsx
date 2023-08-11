@@ -6,11 +6,11 @@ import { Context } from "../context/contextApi";
 import LeftNav from "./LeftNav";
 import SearchResultVideoCard from "./SearchResultVideoCard";
 
-const SearchResult = () => {
-    const [result, setResult] = useState();
+const [result, setResult] = useState();
     const { searchQuery } = useParams();
     const { setLoading } = useContext(Context);
-
+const SearchResult = () => {
+    
     const fetchSearchResults = () => {
         setLoading(true);
         fetchDataFromApi(`search/?q=${searchQuery}`).then((res) => {
@@ -18,11 +18,14 @@ const SearchResult = () => {
             setResult(res?.contents);
             setLoading(false);
         });
-        
-        useEffect(() => {
+    useEffect(() => {
         document.getElementById("root").classList.remove("custom-h");
         fetchSearchResults();
     }, [searchQuery]);
+    
+    
+
+
 
     
     };
