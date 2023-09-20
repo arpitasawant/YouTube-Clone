@@ -1,9 +1,9 @@
 import React, { useContext, useEffect } from "react";
-
 import { Context } from "../context/contextApi";
 import LeftNav from "./LeftNav";
 import VideoCard from "./VideoCard";
 
+//Feed
 const Feed = () => {
     const { loading, searchResults } = useContext(Context);
 
